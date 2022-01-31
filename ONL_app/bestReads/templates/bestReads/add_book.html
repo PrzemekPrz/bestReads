@@ -1,0 +1,10 @@
+{% extends 'bestReads/base.html' %}
+{% block content %}
+
+<h2>Dodaj książke:</h2>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Dodaj">
+</form>
+{% endblock %}

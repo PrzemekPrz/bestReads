@@ -1,0 +1,27 @@
+{% extends 'bestReads/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikacja o książkach</title>
+</head>
+<body>
+        <ul> <p> <a href="/"> Powrót do strony głównej </a> </p> </ul>
+<h3>MENU</h3>
+       <ul>
+            <li><a href="/book_add">Dodaj książke</a></li>
+            <li><a href="/plan_add">Dodaj plan</a></li>
+            <li><a href="/book_add_plan">Dodaj książke do planu</a></li>
+       </ul>
+        <ul>
+            <li><a href="/book/list"> Wyświetł wszystkie ksiązki </a></li>
+            <li><a href="/plan/list"> Wyświetl wszystkie plany   </a></li>
+            <li><a href="/book_plan/list"> Wyświetl wszystkie planowane czytania </a> </li>
+        </ul>
+<h4>Ilość dodanych książek: {{book_count}}</h4>
+<h4>Ilość dodanych planów: {{plan_count}}</h4>
+
+</body>
+</html>
+{% endblock %}

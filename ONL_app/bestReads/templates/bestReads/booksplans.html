@@ -1,0 +1,24 @@
+{% extends 'bestReads/base.html' %}
+{% block content %}
+    <h2>Plany czytania książek:</h2>
+    <table border="1" cellspacing="10">
+        <thead>
+        <tr>
+            <th>Nazwa planu</th>
+            <th>Opis planu</th>
+            <th>Nazwa książki</th>
+            <th>Dzień</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for bookplan in booksplans %}
+        <tr>
+            <td>{{bookplan.plan}}</td>
+            <td>{{bookplan.plan.description}}</td>
+            <td>{{bookplan.book}}</td>
+            <td>{{bookplan.day_name}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

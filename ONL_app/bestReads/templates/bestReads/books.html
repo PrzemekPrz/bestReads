@@ -1,0 +1,28 @@
+{% extends 'bestReads/base.html' %}
+{% block content %}
+    <h2>Książki:</h2>
+    <table border="1" cellspacing="10">
+    <thead>
+        <tr>
+            <th>Nazwa </th>
+            <th>Opis </th>
+            <th>Autor</th>
+            <th>ISBN</th>
+            <th>Ilość stron</th>
+            <th>Ocena użytkownika</th>
+        </tr>
+    </thead>
+        <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{book.name}}</td>
+            <td>{{book.description}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.isbn}}</td>
+            <td><center>{{book.number_pages}}</center></td>
+            <td><center>{{book.votes}}</center></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

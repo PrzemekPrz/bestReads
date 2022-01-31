@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head><meta charset="utf-8"></head>
+    <body background="/static/images/image.png">
+        <h1>Aplikacja do czytania książek</h1>
+        <h2>{{msg}}</h2>
+        <ul>
+            {% if user.is_authenticated %}
+                <p> <a href="/index"> Aplikacja </a> </p>
+            {% else %}
+                <a href="/login_new/"></a>
+            {% endif %}
+
+        </ul>
+        {% block content %} {% endblock %}
+    <footer>
+            {% if user.is_authenticated %}
+                Witaj {{ user }}. <a href="/logout/">Wyloguj</a>
+            {% else %}
+                Jesteś niezalogowany. <a href="/login_new/">Zaloguj</a>
+            {% endif %}
+        <p> <a href="/add_user">Zarejestruj nowego użytkownika </a> </p>
+        </footer>
+    </body>
+</html>

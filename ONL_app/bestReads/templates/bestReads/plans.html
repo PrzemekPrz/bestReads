@@ -1,0 +1,22 @@
+{% extends 'bestReads/base.html' %}
+{% block content %}
+    <h2>Plany:</h2>
+    <table border="1" cellspacing="10">
+        <thead>
+        <tr>
+            <th>Nazwa </th>
+            <th>Opis </th>
+            <th>Ocena użytkownika</th>
+        </tr>
+    </thead>
+        <tbody>
+        {% for plan in plans %}
+        <tr>
+            <td>{{plan.name}}</td>
+            <td><center>{{plan.description}}</center></td>
+            <td><center>{{plan.votes}}</center></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
